@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--앱 실행 후 선택된 사진 없을시 imageView 대신 사용자에게 보여짐-->
+    <!--해당 Image Button을 누를시 앨범에서 추론할 이미지를 선택-->
+    <ImageButton
+        android:id="@+id/imgBtnSel"
+        android:layout_width="314dp"
+        android:layout_height="416dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1"></ImageButton>
+
+    <!--추론할 이미지를 선택했을 경우 Image Button은 비활성화-->
+    <!--imageView에 선택한 사진을 보여줌-->
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"></ImageView>
+
+
+    <!--'button_1'을 눌러 추론을 시작하기 전에는 "사진을 골라주세요." 텍스트 출력-->
+    <!--선택한 사진의 추론이 완료될 경우 "이 동물은 '강아지 or 고양이' 입니다."로 텍스트 변경-->
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="536dp"
+        android:text="사진을 골라주세요."
+        app:layout_constraintEnd_toEndOf="@+id/button_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_1"
+        app:layout_constraintTop_toTopOf="@+id/img1"></TextView>
+
+
+    <!--추론할 이미지를 고른 후 해당 버튼 클릭시 추론 시작-->
+    <!--추론이 완료될 경우 TextView의 내용을 변경-->
+    <!--만약 선택된 사진이 없을때 해당 버튼이 클릭되었을 경우 toast message "선택된 사진이 없습니다." 팝업-->
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="88dp"
+        android:layout_weight="1"
+        android:text="식별하기"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
