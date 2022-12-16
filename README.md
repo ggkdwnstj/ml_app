@@ -1,5 +1,5 @@
 # ml_app
-This is my private android studio machine learning app project.
+This is my private Android Studio machine learning app project.
 
 type: Classification
 
