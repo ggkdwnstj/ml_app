@@ -36,8 +36,22 @@
         android:id="@+id/text1"
         android:layout_width="116dp"
         android:layout_height="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="사진을 골라주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img1"></TextView>
+
+    <TextView
+        android:id="@+id/text_conf"
+        android:layout_width="324dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="확률 표시란"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,29 +62,29 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="36dp"
         android:layout_weight="1"
         android:text="이미지 고르기"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_start"
-        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintBottom_toTopOf="@+id/btn_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btn_test"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:text="추론 시작"
+        android:layout_weight="1"
+        android:text="추론하기"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1"
-        app:layout_constraintVertical_bias="0.11" />
-
+        app:layout_constraintVertical_bias="0.741" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
